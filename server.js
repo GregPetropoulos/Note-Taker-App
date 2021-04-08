@@ -12,13 +12,14 @@ app.use(express.urlencoded({ extended: true }));
 // parse application/json
 app.use(express.json());
 
-
+// Tells html page to start in public folder when looking for images etc.
+app.use(express.static('public'));
  
 // including route files(html-routes.js and api-routes.js) in server
 // Always have the api-route before the html-routes since this data must display on to the html pages
-// require("./app/routing/api-routes.js")(app);
+require("./app/routing/api-routes.js")(app);
 
-// require("./app/routing/html-routes.js")(app);
+require("./app/routing/html-routes.js")(app);
 
 
 
