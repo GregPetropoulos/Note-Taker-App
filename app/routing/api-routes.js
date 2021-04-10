@@ -38,10 +38,10 @@ module.exports = function (app) {
     let data = fs.readFileSync("./app/data/db.json", "utf8");
 
     const dataJSON = JSON.parse(data);
-  
+
     // Pushed new note in notes file 'db.json'
     dataJSON.push(newNote);
-    
+
     // Write notes data to 'db.json' file
     fs.writeFile(
       "./app/data/db.json",
@@ -65,15 +65,15 @@ module.exports = function (app) {
   app.delete("/api/notes/:id", (req, res) => {
     let data = fs.readFileSync("./app/data/db.json", "utf8");
 
+// variable for setting up the filter method
     const dataJSON = JSON.parse(data);
+
+    // if newNotes has a false value
     const newNotes = dataJSON.filter((note) => {
-      if (newNotes.id !== newNotes.id ){
-  // stuckkk heeeerrrreeeeeee
-      }else {
-        return newNotes;
-      }
+      return note.id !== dataJSON.id;
     });
-console.log('hitter')
+    
+    console.log("hitter");
     fs.writeFile(
       "./app/data/db.json",
       JSON.stringify(newNotes),
