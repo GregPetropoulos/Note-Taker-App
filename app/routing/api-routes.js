@@ -63,28 +63,25 @@ module.exports = function (app) {
 
   //   API DELETE Request
   app.delete("/api/notes/:id", (req, res) => {
+    // read file
     let data = fs.readFileSync("./app/data/db.json", "utf8");
 
-// variable for setting up the filter method
+    // variable for setting up the filter method
     const dataJSON = JSON.parse(data);
 
-    // if newNotes has a false value
+    // if newNotes has a false value, use filter method and req.params
+    // https://expressjs.com/en/guide/routing.html#route-parameters
     const newNotes = dataJSON.filter((note) => {
-      return note.id !== dataJSON.id;
+      return note.id !== req.params.id;
     });
-    
-    console.log("hitter");
-    fs.writeFile(
-      "./app/data/db.json",
-      JSON.stringify(newNotes),
-      (err, text) => {
+    // console.log(req.params)
+     
+    fs.writeFile( "./app/data/db.json",JSON.stringify(newNotes),(err, text) => {
         if (err) {
           console.error(err);
           return;
         }
-        console.log("HELLO", text);
-      }
-    );
+      });
 
     res.json(newNotes);
   });
