@@ -1,3 +1,10 @@
+// installed
+// npm i -y
+// npm install express
+// npm init
+// npm jest
+// npm uniqid
+
 // Dependencies
 const express = require('express')
 const path = require('path')
@@ -13,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Tells html page to start in public folder when looking for images etc.
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname + '/app/public')));
  
 // including route files(html-routes.js and api-routes.js) in server
 // Always have the api-route before the html-routes since this data must display on to the html pages
