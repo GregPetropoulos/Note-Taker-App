@@ -8,8 +8,7 @@ const fs = require("fs");
 // installed unique Id package from npm
 var uniqid = require("uniqid");
 
-// brought in json data from data directory
-const notesRead = require("../data/db.json");
+
 
 // ROUTING
 module.exports = function (app) {

@@ -1,5 +1,10 @@
 # Note-Taker-App
+
+ 
  ![GitHub License Badge](https://shields.io/badge/license-MIT-green)
+
+
+ ## [Deployed App](https://note-app5000.herokuapp.com/)
 
 ## Description
 A small business owner wanted to be able to write and save notes so that owner can organize his thoughts and keep track of tasks he needed to complete.
@@ -53,13 +58,17 @@ When the existing note in the list is clicked in the left-hand column and that n
 When the write icon is clicked on in the navigation at the top of the page I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ### Video
-[![a video walkthrough of the Note-Taker-App](assets/images/screenshot1.png)](http://www.youtube.com/watch?v=xi-pgWb11iY "Note-Taker-App Walk Through")
+[![a video walkthrough of the Note-Taker-App](./app/public/assets/images/screenshot-homepage.png)](https://youtu.be/wiFW3gQgfd8 "Note-Taker-App Walk Through")
 
-### screenshot 1
-![alt text](assets/images/screenshot1.png)
+### Screenshot 1 - Home
+![Home Page](./app/public/assets/images/screenshot-homepage.png)
 
-### screenshot 2
-![alt text](assets/images/screenshot2.png)
+
+### Screenshot 2 - Notes
+![Note Page](./app/public/assets/images/screenshot-notes.png)
+
+### Screenshot 3 - Added Notes
+![Notes Page](./app/public/assets/images/screenshot-add.png)
 
 
 
